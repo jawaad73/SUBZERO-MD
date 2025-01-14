@@ -40,11 +40,11 @@ cmd({
     await reply('> *Generating QR code...*');
 
     // GET Method
-    // const response = await fetchJson(`https://api.giftedtech.web.id/api/tools/createqr?apikey=gifted&text=${encodeURIComponent(q)}`);
-    // const imageUrl = response.result;
+     const response = await fetchJson(`https://api.giftedtech.web.id/api/tools/createqr?apikey=gifted&text=${encodeURIComponent(q)}`);
+    const imageUrl = response.result;
 
     // BUFFER Method
-    const response = await fetchBuffer(`https://api.giftedtech.web.id/api/tools/createqr?apikey=gifted&text=${encodeURIComponent(q)}`);
+  //  const response = await fetchBuffer(`https://api.giftedtech.web.id/api/tools/createqr?apikey=gifted&text=${encodeURIComponent(q)}`);
     await conn.sendMessage(m.chat, { image: response }, { quoted: m, caption: 'QR Code' });
   } catch (error) {
     console.error(error);
