@@ -54,7 +54,7 @@ cmd({
     const response = await fetchJson(apiUrl);
     const result = response.result;
 
-    const caption = `*SUBZERO URL SHORTENER*\n*\n\n*Original Link:* ${q}\n*Shortened Link:* ${result}`;
+    const caption = ` \`SUBZERO URL SHORTENER\` \n\n*Original Link:* ${q}\n\n*Shortened Link:* ${result}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ғʀᴀɴᴋ`;
 
     await conn.sendMessage(m.chat, { text: caption }, { quoted: m });
   } catch (error) {
