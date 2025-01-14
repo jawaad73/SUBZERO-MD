@@ -9,10 +9,9 @@ cmd({
   category: 'image',
   filename: __filename
 }, async (conn, mek, m, {
-  text,
+  body,
   from,
   quoted,
-  body,
   isCmd,
   command,
   args,
@@ -34,6 +33,7 @@ cmd({
   reply
 }) => {
   try {
+    const text = body.trim().replace(command, '').trim();
     if (!text) {
       return reply(`*Usage:* ${command} <prompt>\n\n*Example:* ${command} cat`);
     }
@@ -48,3 +48,5 @@ cmd({
     reply(`*AN ERROR OCCURRED!! MESSAGE :*\n\n> ${error.message}`);
   }
 });
+
+
