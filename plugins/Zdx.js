@@ -1,7 +1,7 @@
-/*const config = require('../config');
+const config = require('../config');
 const { cmd, commands } = require('../command');
 const { fetchJson } = require('../lib/functions');
-
+/*
 cmd({
   pattern: 'play0',
   desc: 'Play a song from YouTube',
@@ -136,7 +136,7 @@ cmd({
 });
 */
 
-/*//----+-++
+
 cmd({
   pattern: 'wallpaper0',
   desc: 'Get a random wallpaper',
