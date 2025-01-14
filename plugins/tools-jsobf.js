@@ -1,4 +1,5 @@
-
+// I knew you would also come here😂
+// SUBZERO MD
 
 const config = require('../config');
 const { cmd, commands } = require('../command');
