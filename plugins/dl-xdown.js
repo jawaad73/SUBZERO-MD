@@ -21,7 +21,7 @@ const fetchJson = async (url) => {
 cmd({
     pattern: "xdownload",
     alias: ["xnxxdl","xxx"],
-    react: "📥",
+    react: "⭕",
     desc: "Download videos from Xvideos.",
     category: "utility",
     filename: __filename
@@ -75,4 +75,4 @@ cmd({
         return reply("❌ An error occurred while processing your request. Please try again.");
     }
 });
-
+// SUBZERO MD PLUGIN
