@@ -4,11 +4,8 @@ const { fetchJson } = require('../lib/functions');
 
 
 
-
-
 cmd({
-  pattern: 'mediafirepro',
-  react: '📥',
+  pattern: 'mediafire',
   desc: 'Download MediaFire files',
   category: 'download',
   filename: __filename
@@ -40,7 +37,7 @@ cmd({
     const text = body.trim().replace(command, '').trim();
     if (!text) return reply(`*Example*: ${command} https://www.mediafire.com/file/n6tgcrktbnov1oy/Queen_Anita-V4.zip/file`);
 
-    await reply('> *Subzero Processing...*');
+    await reply('> *Processing...*');
 
     const apiUrl = `https://api.davidcyriltech.my.id/mediafire?url=${encodeURIComponent(text)}`;
 
@@ -53,13 +50,13 @@ cmd({
         document: { url: downloadLink },
         mimetype: mimeType,
         fileName: fileName,
-        caption: `📦 *File Name:* ${fileName}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ғʀᴀɴᴋ`
+        caption: `📦 *File Name:* ${fileName}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴀᴠɪᴅ ᴄʏʀɪʟ ᴛᴇᴄʜ`
       }, { quoted: m });
     } else {
       reply(`*Failed to fetch file details! Please check the MediaFire URL and try again.*`);
     }
   } catch (error) {
     console.error('Error during MediaFire command:', error);
-    reply(`*An error occurred while processing your request. Please try again later.*`);
+    reply(`*An error occurred while processing your request. Please try again later.*\n\nError details: ${error.message}\n${error.stack}`);
   }
 });
