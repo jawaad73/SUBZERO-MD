@@ -7,7 +7,7 @@ const { fetchJson } = require('../lib/functions');
 cmd({
   pattern: 'obfuscate',
   alias: ['obf'],
-  react: '',
+  react: '🖤',
   desc: 'Obfuscates JavaScript code.',
   category: 'main',
   filename: __filename
