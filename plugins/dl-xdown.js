@@ -1,4 +1,4 @@
-const { cmd } = require('../command');
+/*const { cmd } = require('../command');
 const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
@@ -74,3 +74,4 @@ cmd({
         return reply("❌ An error occurred while processing your request. Please try again.");
     }
 });
+*/
