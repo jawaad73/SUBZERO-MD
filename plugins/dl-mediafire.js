@@ -1,11 +1,14 @@
 const config = require('../config');
 const { cmd, commands } = require('../command');
 const { fetchJson } = require('../lib/functions');
+const axios = require("axios");
+
+
 
 
 
 cmd({
-  pattern: 'mediafire',
+  pattern: 'mediafirepro',
   desc: 'Download MediaFire files',
   category: 'download',
   filename: __filename
@@ -41,19 +44,25 @@ cmd({
 
     const apiUrl = `https://api.davidcyriltech.my.id/mediafire?url=${encodeURIComponent(text)}`;
 
-    const apiResponse = await axios.get(apiUrl);
+    try {
+      const apiResponse = await axios.get(apiUrl);
+      console.log('API response:', apiResponse);
 
-    if (apiResponse.data && apiResponse.data.downloadLink) {
-      const { fileName, mimeType, downloadLink } = apiResponse.data;
+      if (apiResponse.data && apiResponse.data.downloadLink) {
+        const { fileName, mimeType, downloadLink } = apiResponse.data;
 
-      await conn.sendMessage(m.chat, {
-        document: { url: downloadLink },
-        mimetype: mimeType,
-        fileName: fileName,
-        caption: `📦 *File Name:* ${fileName}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴀᴠɪᴅ ᴄʏʀɪʟ ᴛᴇᴄʜ`
-      }, { quoted: m });
-    } else {
-      reply(`*Failed to fetch file details! Please check the MediaFire URL and try again.*`);
+        await conn.sendMessage(m.chat, {
+          document: { url: downloadLink },
+          mimetype: mimeType,
+          fileName: fileName,
+          caption: `📦 *File Name:* ${fileName}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴀᴠɪᴅ ᴄʏʀɪʟ ᴛᴇᴄʜ`
+        }, { quoted: m });
+      } else {
+        reply(`*Failed to fetch file details! Please check the MediaFire URL and try again.*`);
+      }
+    } catch (error) {
+      console.error('Error fetching API response:', error);
+      reply(`*Error fetching API response: ${error.message}*`);
     }
   } catch (error) {
     console.error('Error during MediaFire command:', error);
