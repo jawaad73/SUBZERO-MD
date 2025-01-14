@@ -33,7 +33,7 @@ isAdmins,
 reply
 }) => {
 try {
-if (!text) {
+if (text) {
 return reply(`*Usage:* ${command} <prompt>\n\n*Example:* ${command} cat`);
 }
 
