@@ -30,7 +30,7 @@ const {
 } = require("../command");
 cmd({
   'pattern': "tourl",
-  'alias': ["imgtourl", "img2url", "url"],
+  'alias': ["imgtourl", "imgurl", "url"],
   'react': '🖇',
   'desc': "convert.",
   'category': 'anime',
@@ -78,11 +78,11 @@ cmd({
       }
     });
     if (!_0xf67b93.data || !_0xf67b93.data.data || !_0xf67b93.data.data.url) {
-      throw "❌ Error al subir el archivo";
+      throw "❌ Error";
     }
     let _0x56f6ae = _0xf67b93.data.data.url;
     fs.unlinkSync(_0x45ad97);
-    _0x4572c0.reply("*ᴜᴘʟᴏᴀᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ*\n " + _0x4fb74b.length + " Byte(s)\n *URL-IMG* 🖇️ " + _0x56f6ae + "\n\n> *© ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ sᴜʙᴢᴇʀᴏ ᴍᴅ❄️*");
+    _0x4572c0.reply("*sᴜʜᴢᴇʀᴏ ᴜᴘʟᴏᴀᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ*\n\n " + _0x4fb74b.length + " Byte(s)\n *URL :*" + _0x56f6ae + "\n\n> *© ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ sᴜʙᴢᴇʀᴏ ᴍᴅ❄️*");
   } catch (_0x141b19) {
     _0x2cab4a('' + _0x141b19);
     console.log(_0x141b19);
