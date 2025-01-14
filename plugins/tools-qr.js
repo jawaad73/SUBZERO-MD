@@ -1,3 +1,5 @@
+// I knew You would come 😂
+// SUBZERO MD PROPERTY
 
 const config = require('../config');
 const { cmd, commands } = require('../command');
