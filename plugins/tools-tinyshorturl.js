@@ -1,4 +1,6 @@
-
+// Back for Business???
+// Clone Yahh 
+// SUBZERO MD PROPERTY
 const config = require('../config');
 const { cmd, commands } = require('../command');
 const { fetchJson } = require('../lib/functions');
@@ -6,7 +8,7 @@ const { fetchJson } = require('../lib/functions');
 cmd({
   pattern: 'tinyurl',
   alias: ['tiny', 'shorten', 'short', 'shorturl'],
-  react: '💘',
+  react: '🔄',
   desc: 'Shorten a URL using TinyURL.',
   category: 'main',
   filename: __filename
