@@ -1,4 +1,4 @@
-/*const { cmd } = require('../command');
+const { cmd } = require('../command');
 const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
@@ -20,6 +20,7 @@ const fetchJson = async (url) => {
 
 cmd({
     pattern: "xdownload",
+    alias: ["xnxxdl","xxx"],
     react: "📥",
     desc: "Download videos from Xvideos.",
     category: "utility",
@@ -63,7 +64,7 @@ cmd({
         console.log(`Subzero downloaded video successfully: ${videoPath}`);
 
         // Send the video to the user
-        await conn.sendMessage(m.chat, { video: fs.readFileSync(videoPath), caption: `🎥 *Title:* ${videoData.title}\n👀 *Views:* ${videoData.views}\n👍 *Likes:* ${videoData.likes}` });
+        await conn.sendMessage(m.chat, { video: fs.readFileSync(videoPath), caption: `*\`SUBZERO MD XVIDEOS DL\` \n\n🎥 *Title:* ${videoData.title}\n👀 *Views:* ${videoData.views}\n👍 *Likes:* ${videoData.likes}` });
 
         // Clean up the downloaded file
         fs.unlinkSync(videoPath);
@@ -74,4 +75,4 @@ cmd({
         return reply("❌ An error occurred while processing your request. Please try again.");
     }
 });
-*/
+
