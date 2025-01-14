@@ -1,3 +1,34 @@
+// Thats Why You Are Single🥲😂
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const config = require('../config');
 const { cmd, commands } = require('../command');
 const { fetchJson } = require('../lib/functions');
@@ -43,7 +74,7 @@ cmd({
 
     const apiUrl = `https://api.davidcyriltech.my.id/flux?prompt=${encodeURIComponent(text)}`;
 
-    await conn.sendMessage(m.chat, { image: { url: apiUrl }, caption: `🎨 *Flux Image Generator*\n\n📄 *Prompt:* ${text}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ғʀᴀʙᴋ` }, { quoted: m });
+    await conn.sendMessage(m.chat, { image: { url: apiUrl }, caption: `🎨 *Flux Image Generator*\n\n📄 *Prompt:* ${text}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ғʀᴀɴᴋ` }, { quoted: m });
   } catch (error) {
     console.error('Error in Flux command:', error);
     reply(`*AN ERROR OCCURRED!! MESSAGE :*\n\n> ${error.message}`);
