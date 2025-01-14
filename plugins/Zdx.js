@@ -1,4 +1,4 @@
-const config = require('../config');
+/*const config = require('../config');
 const { cmd, commands } = require('../command');
 const { fetchJson } = require('../lib/functions');
 const yts = require("yt-search");
@@ -64,7 +64,7 @@ cmd({
     reply(`*An error occurred while processing your request. Please try again later.*`);
   }
 });
-
+*/
 
 /*//----+-++
 cmd({
