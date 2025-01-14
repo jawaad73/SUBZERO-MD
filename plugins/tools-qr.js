@@ -1,12 +1,13 @@
 
-const config = require('../config');
+
+  const config = require('../config');
 const { cmd, commands } = require('../command');
-const { fetchJson, fetchBuffer } = require('../lib/functions');
+const { fetchBuffer } = require('../lib/functions');
 
 cmd({
   pattern: 'qrcode',
   alias: ['qr'],
-  react: '‍🩹',
+  react: '',
   desc: 'Generate a QR code.',
   category: 'main',
   filename: __filename
@@ -39,15 +40,18 @@ cmd({
 
     await reply('> *Generating QR code...*');
 
-    // GET Method
-     const response = await fetchJson(`https://api.giftedtech.web.id/api/tools/createqr?apikey=gifted&text=${encodeURIComponent(q)}`);
-    const imageUrl = response.result;
+    const response = await fetchBuffer(`https://api.giftedtech.web.id/api/tools/createqr?apikey=gifted&text=${encodeURIComponent(q)}`);
 
-    // BUFFER Method
-  //  const response = await fetchBuffer(`https://api.giftedtech.web.id/api/tools/createqr?apikey=gifted&text=${encodeURIComponent(q)}`);
-    await conn.sendMessage(m.chat, { image: response }, { quoted: m, caption: 'QR Code' });
+    if (!response) {
+      throw new Error('Failed to retrieve QR code image');
+    }
+
+    const base64Image = `data:image/png;base64,${response.toString('base64')}`;
+
+    await conn.sendMessage(m.chat, { image: { url: base64Image } }, { quoted: m, caption: 'QR Code' });
   } catch (error) {
     console.error(error);
     reply(`An error occurred: ${error.message}`);
   }
 });
+ 
