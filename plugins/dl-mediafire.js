@@ -5,16 +5,17 @@ const { fetchJson } = require('../lib/functions');
 
 
 
+
 cmd({
   pattern: 'mediafirepro',
+  react: '📥',
   desc: 'Download MediaFire files',
   category: 'download',
   filename: __filename
 }, async (conn, mek, m, {
-  text,
+  body,
   from,
   quoted,
-  body,
   isCmd,
   command,
   args,
@@ -36,9 +37,10 @@ cmd({
   reply
 }) => {
   try {
+    const text = body.trim().replace(command, '').trim();
     if (!text) return reply(`*Example*: ${command} https://www.mediafire.com/file/n6tgcrktbnov1oy/Queen_Anita-V4.zip/file`);
 
-    await reply('> *Processing...*');
+    await reply('> *Subzero Processing...*');
 
     const apiUrl = `https://api.davidcyriltech.my.id/mediafire?url=${encodeURIComponent(text)}`;
 
@@ -51,7 +53,7 @@ cmd({
         document: { url: downloadLink },
         mimetype: mimeType,
         fileName: fileName,
-        caption: `📦 *File Name:* ${fileName}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ғʀᴀɴᴋ ᴏғᴄ`
+        caption: `📦 *File Name:* ${fileName}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ғʀᴀɴᴋ`
       }, { quoted: m });
     } else {
       reply(`*Failed to fetch file details! Please check the MediaFire URL and try again.*`);
