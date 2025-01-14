@@ -6,7 +6,7 @@ const { fetchBuffer } = require('../lib/functions');
 cmd({
   pattern: 'qrcode',
   alias: ['qr'],
-  react: '',
+  react: '💛',
   desc: 'Generate a QR code.',
   category: 'main',
   filename: __filename
