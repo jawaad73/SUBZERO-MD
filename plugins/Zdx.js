@@ -1,7 +1,7 @@
 const config = require('../config');
 const { cmd, commands } = require('../command');
 const { fetchJson } = require('../lib/functions');
-
+const yts = require("yt-search");
 
 cmd({
   pattern: 'play0',
@@ -38,7 +38,7 @@ cmd({
 
     await reply('> *Processing...*');
 
-    const yts = require("yt-search");
+    
     let search = await yts(text);
     let video = search.all[0];
 
@@ -66,7 +66,7 @@ cmd({
 });
 
 
-//----+-++
+/*//----+-++
 cmd({
   pattern: 'wallpaper0',
   desc: 'Get a random wallpaper',
@@ -121,3 +121,4 @@ cmd({
     }
   } catch (error) {
     console.error('Error in Wallpaper command:', error
+*/
