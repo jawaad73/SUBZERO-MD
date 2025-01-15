@@ -218,7 +218,7 @@ Support      : wa.me/18062212660
 const axios = require('axios');
 const config = require('../config');
 const { cmd, commands } = require('../command');
-
+const cheerio = require('cheerio');
 cmd({
   pattern: 'googlesearch2',
   alias: ['google2', 'gs'],
