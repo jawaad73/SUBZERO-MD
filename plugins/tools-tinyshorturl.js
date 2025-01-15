@@ -1,3 +1,21 @@
+/*
+
+$$$$$$\            $$\                                               
+$$  __$$\           $$ |                                              
+$$ /  \__|$$\   $$\ $$$$$$$\  $$$$$$$$\  $$$$$$\   $$$$$$\   $$$$$$\  
+\$$$$$$\  $$ |  $$ |$$  __$$\ \____$$  |$$  __$$\ $$  __$$\ $$  __$$\ 
+ \____$$\ $$ |  $$ |$$ |  $$ |  $$$$ _/ $$$$$$$$ |$$ |  \__|$$ /  $$ |
+$$\   $$ |$$ |  $$ |$$ |  $$ | $$  _/   $$   ____|$$ |      $$ |  $$ |
+\$$$$$$  |\$$$$$$  |$$$$$$$  |$$$$$$$$\ \$$$$$$$\ $$ |      \$$$$$$  |
+ \______/  \______/ \_______/ \________| \_______|\__|       \______/
+
+Project Name : SubZero MD
+Creator      : Darrell Mucheri ( Mr Frank OFC )
+Repo         : https//github.com/mrfrank-ofc/SUBZERO-MD
+Support      : wa.me/18062212660
+*/
+
+
 // SUBZERO PROPERTY 
 // I KNEW U WOULD COME
 
@@ -40,7 +58,7 @@ cmd({
   try {
     if (!q) return reply('Please provide a URL to shorten.');
 
-    await reply('> *Processing...*');
+    await reply('> *Subzero Processing...*');
 
     let apiUrl = '';
     if (command === 'tiny' || command === 'tinyurl') {
@@ -54,7 +72,7 @@ cmd({
     const response = await fetchJson(apiUrl);
     const result = response.result;
 
-    const caption = ` \`SUBZERO URL SHORTENER\` \n\n*Original Link:* ${q}\n\n*Shortened Link:* ${result}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ғʀᴀɴᴋ`;
+    const caption = ` \`SUBZERO URL SHORTENER\` \n\n\n*Original Link:* ${q}\n\n*Shortened Link:* ${result}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ғʀᴀɴᴋ`;
 
     await conn.sendMessage(m.chat, { text: caption }, { quoted: m });
   } catch (error) {
