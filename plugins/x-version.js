@@ -50,9 +50,9 @@ cmd({
 
     let message = '';
     if (currentVersion === latestVersion) {
-      message = `Your bot is up-to-date! Current version: ${currentVersion}`;
+      message = `Your Subzero bot is up-to-date! 😊\n Current version is: ${currentVersion}`;
     } else {
-      message = `Your bot is outdated! Current version: ${currentVersion}, Latest version: ${latestVersion}`;
+      message = `Your Subzero bot is outdated 😵!\n\n  Current version: ${currentVersion} \n Latest version: ${latestVersion}`;
     }
 
    // await reply(message);
@@ -64,7 +64,7 @@ cmd({
 //});
        // Send the status message with an image
         await conn.sendMessage(from, { 
-            image: { url: `https://i.postimg.cc/yNf7rQFw/prn.jpg` },  // Image URL
+            image: { url: `https://i.ibb.co/nzGyYCk/mrfrankofc.jpg` },  // Image URL
             caption: message,
             contextInfo: {
                 mentionedJid: [m.sender],
