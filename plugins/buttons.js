@@ -1,4 +1,4 @@
-const config = require('../config');
+/*const config = require('../config');
 const { cmd, commands } = require('../command');
 const { fetchJson } = require('../lib/functions');
 const { Buttons, List } = require('whatsapp-web.js');
@@ -52,3 +52,4 @@ cmd({
     reply(`An error occurred: ${error.message}`);
   }
 });
+*/
