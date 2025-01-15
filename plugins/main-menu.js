@@ -147,7 +147,7 @@ const axios = require('axios');
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 const packageName = require('../package.json');
-    const currentVersion = packageName.version;
+ const currentVersion = packageName.version;
 
     const apiUrl = 'https://raw.githubusercontent.com/mrfrank-ofc/SUBZERO-MD/master/package.json';
     const response = await axios.get(apiUrl);
@@ -173,7 +173,7 @@ let dec = `
 ▧ *ᴍᴏᴅᴇ* : *${config.MODE}*
 ▧ *ᴘʀᴇғɪx* : *${config.PREFIX}*
 ▧ *ʀᴀᴍ* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-▧ *ᴠᴇʀsɪᴏɴ* : *${currentVersion}* ⚡
+▧ *ᴠᴇʀsɪᴏɴ* : *${latestVersion}* ⚡
 ▧ *ᴜᴘᴛɪᴍᴇ* : ${runtime(process.uptime())}
 
 ⟣──────────────────⟢
