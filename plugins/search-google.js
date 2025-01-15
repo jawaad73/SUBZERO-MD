@@ -220,8 +220,8 @@ const config = require('../config');
 const { cmd, commands } = require('../command');
 
 cmd({
-  pattern: 'googlesearch',
-  alias: ['google', 'gs'],
+  pattern: 'googlesearch2',
+  alias: ['google2', 'gs'],
   react: '',
   desc: 'Perform a Google search.',
   category: 'search',
@@ -276,12 +276,10 @@ cmd({
 
 
 
-/*const axios = require("axios");
-const { cmd } = require("../command");
 
 cmd({
     pattern: "google",
-    alias: ["gsearch", "search"],
+    alias: ["gsearch", "googlesearch"],
     desc: "Search Google for a query.",
     category: "tools",
     react: "🌐",
@@ -319,4 +317,4 @@ cmd({
     }
 });
 
-*/
+
