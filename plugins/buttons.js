@@ -1,7 +1,7 @@
 const config = require('../config');
 const { cmd, commands } = require('../command');
 const { fetchJson } = require('../lib/functions');
-
+const { Buttons, List } = require('whatsapp-web.js');
 
 cmd({
   pattern: "testbutton",
