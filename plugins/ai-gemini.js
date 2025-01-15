@@ -1,3 +1,8 @@
+/*
+
+Hey Cloner Make This Work
+Yours Mr Frank
+
 
 const axios = require('axios');
 const config = require('../config');
@@ -51,3 +56,4 @@ cmd({
     reply(`An error occurred: ${error.message}`);
   }
 });
+*/
