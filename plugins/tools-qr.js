@@ -1,21 +1,12 @@
-// I knew You would come 😂
-// SUBZERO MD PROPERTY
-
 
 const axios = require('axios');
 const config = require('../config');
 const { cmd, commands } = require('../command');
 
-// Define the fetchBuffer function
-async function fetchBuffer(url) {
-  const response = await axios.get(url, { responseType: 'arraybuffer' });
-  return Buffer.from(response.data, 'binary');
-}
-
 cmd({
   pattern: 'qrcode',
   alias: ['qr'],
-  react: '💛',
+  react: '😆',
   desc: 'Generate a QR code.',
   category: 'main',
   filename: __filename
@@ -46,12 +37,56 @@ cmd({
   try {
     if (!q) return reply('Please provide text to generate QR code.');
     await reply('> *Generating QR code...*');
-    const response = await fetchBuffer(`https://api.giftedtech.web.id/api/tools/createqr?apikey=gifted&text=${encodeURIComponent(q)}`);
-    if (!response) {
-      throw new Error('Failed to retrieve QR code image');
-    }
-    const base64Image = `data:image/png;base64,${response.toString('base64')}`;
-    await conn.sendMessage(m.chat, { image: { url: base64Image } }, { quoted: m, caption: 'QR Code' });
+    const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(q)}&size=200x200`;
+    const response = await axios.get(apiUrl, { responseType: 'arraybuffer' });
+    const buffer = Buffer.from(response.data, 'binary');
+    await conn.sendMessage(m.chat, { image: buffer }, { quoted: m, caption: 'QR Code' });
+  } catch (error) {
+    console.error(error);
+    reply(`An error occurred: ${error.message}`);
+  }
+});
+
+
+cmd({
+  pattern: 'qrcode2',
+  alias: ['qr2'],
+  react: '😇',
+  desc: 'Generate a QR code.',
+  category: 'main',
+  filename: __filename
+}, async (conn, mek, m, {
+  from,
+  quoted,
+  body,
+  isCmd,
+  command,
+  args,
+  q,
+  isGroup,
+  sender,
+  senderNumber,
+  botNumber2,
+  botNumber,
+  pushname,
+  isMe,
+  isOwner,
+  groupMetadata,
+  groupName,
+  participants,
+  groupAdmins,
+  isBotAdmins,
+  isAdmins,
+  reply
+}) => {
+  try {
+    if (!q) return reply('Please provide text to generate QR code.');
+    await reply('> *Generating QR code...*');
+    const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(q)}&size=200x200`;
+    const response = await axios.get(apiUrl, { responseType: 'text' });
+    const base64String = response.data;
+    const buffer = Buffer.from(atob(base64String), 'binary');
+    await conn.sendMessage(m.chat, { image: buffer }, { quoted: m, caption: 'QR Code' });
   } catch (error) {
     console.error(error);
     reply(`An error occurred: ${error.message}`);
