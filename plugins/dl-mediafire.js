@@ -1,6 +1,6 @@
 
 
-/*const config = require('../config');
+const config = require('../config');
 const { cmd, commands } = require('../command');
 const { fetchJson } = require('../lib/functions');
 const axios = require("axios");
@@ -9,7 +9,7 @@ const axios = require("axios");
 
 
 cmd({
-  pattern: 'mediafirep',
+  pattern: 'mediafirepro',
   desc: 'Download MediaFire files',
   category: 'download',
   filename: __filename
@@ -41,7 +41,7 @@ cmd({
     const text = body.trim().replace(command, '').trim();
     if (!text) return reply(`*Example*: ${command} https://www.mediafire.com/file/n6tgcrktbnov1oy/Queen_Anita-V4.zip/file`);
 
-    await reply('> *Processing...*');
+    await reply('> *Subzero Processing...*');
 
     const apiUrl = `https://api.davidcyriltech.my.id/mediafire?url=${encodeURIComponent(text)}`;
 
@@ -61,7 +61,7 @@ cmd({
             document: { url: downloadLink },
             mimetype: mimeType,
             fileName: fileName,
-            caption: `📦 *File Name:* ${fileName}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴀᴠɪᴅ ᴄʏʀɪʟ ᴛᴇᴄʜ`
+            caption: `📦 *File Name:* ${fileName}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ғʀᴀɴᴋ`
           }, { quoted: m });
           return;
         } else {
