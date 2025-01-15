@@ -11,6 +11,7 @@ const { fetchJson } = require('../lib/functions');
 
 cmd({
   pattern: 'version',
+  react: '✔️',
   desc: 'Check the bot\'s version',
   category: 'info',
   filename: __filename
@@ -54,9 +55,31 @@ cmd({
       message = `Your bot is outdated! Current version: ${currentVersion}, Latest version: ${latestVersion}`;
     }
 
-    await reply(message);
-  } catch (error) {
-    console.error('Error fetching version:', error);
-    await reply('Error fetching version. Please try again later.');
-  }
+   // await reply(message);
+    
+ // } catch (error) {
+  //  console.error('Error fetching version:', error);
+   // await reply('Error fetching version. Please try again later.');
+//  }
+//});
+       // Send the status message with an image
+        await conn.sendMessage(from, { 
+            image: { url: `https://i.postimg.cc/yNf7rQFw/prn.jpg` },  // Image URL
+            caption: message,
+            contextInfo: {
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363304325601080@newsletter',
+                    newsletterName: '『 𝐒𝐔𝐁𝐙𝐄𝐑𝐎 𝐌𝐃 』',
+                    serverMessageId: 143
+                }
+            }
+        }, { quoted: mek });
+
+    } catch (e) {
+        console.error("Error in Subzero checking Version:", e);
+        reply(`An error Occured Fetching Version 😕`);
+    }
 });
