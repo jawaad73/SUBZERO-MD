@@ -40,14 +40,15 @@ cmd({
     const apiUrl = `https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(q)}&size=200x200`;
     const response = await axios.get(apiUrl, { responseType: 'arraybuffer' });
     const buffer = Buffer.from(response.data, 'binary');
-    /*
-    await conn.sendMessage(m.chat, { image: buffer }, { quoted: m, caption: 'QR Code' });
+    
+    await conn.sendMessage(m.chat, { image: buffer }, { quoted: m, caption: 'QR Code By Subzero' });
   } catch (error) {
     console.error(error);
     reply(`An error occurred: ${error.message}`);
   }
 });
-*/
+
+/*
     // Send the status message with an image
         await conn.sendMessage(from, { 
             image: { url: buffer },  // Image URL
@@ -69,4 +70,5 @@ cmd({
         reply(`An error occurred: ${e.message}`);
     }
 });
+*/
 
