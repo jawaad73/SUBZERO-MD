@@ -212,8 +212,6 @@ Support      : wa.me/18062212660
 
 
 
-
-
 const axios = require('axios');
 const config = require('../config')
 const {cmd , commands} = require('../command')
@@ -223,7 +221,7 @@ cmd({
     pattern: "trt",
     alias: ["translate"],
     desc: "🌍 Translate text between languages",
-    react: "🪄",
+    react: "🌍",
     category: "other",
     filename: __filename
 },
@@ -240,7 +238,7 @@ async (conn, mek, m, { from, q, reply }) => {
         const response = await axios.get(url);
         const translation = response.data.responseData.translatedText;
 
-        const translationMessage = `> *SUBZERO MD TRANSLATOR 💞*
+        const translationMessage = `> *SUBZERO MD TRANSLATION*
 
 > 🔤 *Original*: ${textToTranslate}
 
@@ -260,12 +258,12 @@ cmd({
     pattern: "tts",
     desc: "download songs",
     category: "download",
-    react: "✔️",
+    react: "🚀",
     filename: __filename
 },
 async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
 try{
-if(!q) return reply("Need some text to convert to audio.")
+if(!q) return reply("Need some text.")
     const url = googleTTS.getAudioUrl(q, {
   lang: 'hi-IN',
   slow: false,
@@ -275,4 +273,4 @@ await conn.sendMessage(from, { audio: { url: url }, mimetype: 'audio/mpeg', ptt:
     }catch(a){
 reply(`${a}`)
 }
-})                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             );}});
+})
