@@ -30,6 +30,9 @@ PREFIX: process.env.PREFIX || ".",
 BOT_NAME: process.env.BOT_NAME || "『 𝐒𝐔𝐁𝐙𝐄𝐑𝐎 𝐌𝐃 』",
 // Enter Your Bot Name
 
+ANTI_VV: process.env.ANTI_VV || "true",
+// Allow Viewoncs view Unlimited 
+ 
 CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
 // make this true for custum emoji react  
   

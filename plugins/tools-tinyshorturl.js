@@ -74,9 +74,31 @@ cmd({
 
     const caption = ` \`SUBZERO URL SHORTENER\` \n\n\n*Original Link:* ${q}\n\n*Shortened Link:* ${result}\n\n> ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴍʀ ғʀᴀɴᴋ`;
 
-    await conn.sendMessage(m.chat, { text: caption }, { quoted: m });
+   /* await conn.sendMessage(m.chat, { text: caption }, { quoted: m });
   } catch (error) {
     console.error(error);
     reply(`An error occurred: ${error.message}`);
   }
+});
+*/
+ // Send the status message with an image
+        await conn.sendMessage(from, { 
+            image: { url: `https://i.ibb.co/DR0k2XM/mrfrankofc.jpg` },  // Image URL
+            caption: caption,
+            contextInfo: {
+                mentionedJid: [m.sender],
+                forwardingScore: 999,
+                isForwarded: true,
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: '120363304325601080@newsletter',
+                    newsletterName: '『 𝐒𝐔𝐁𝐙𝐄𝐑𝐎 𝐌𝐃 』',
+                    serverMessageId: 143
+                }
+            }
+        }, { quoted: mek });
+
+    } catch (e) {
+        console.error("Error in shortining URL:", e);
+        reply(`An error occurred: ${e.message}`);
+    }
 });
