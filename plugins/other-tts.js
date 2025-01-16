@@ -214,4 +214,65 @@ Support      : wa.me/18062212660
 
 
 
-const _0x32f080=_0x2a22;(function(_0xd9f5f8,_0x211240){const _0x3a81af=_0x2a22,_0xdb5bfb=_0xd9f5f8();while(!![]){try{const _0x1e8382=-parseInt(_0x3a81af(0x151))/0x1*(parseInt(_0x3a81af(0x158))/0x2)+parseInt(_0x3a81af(0x154))/0x3+parseInt(_0x3a81af(0x15b))/0x4+-parseInt(_0x3a81af(0x146))/0x5+parseInt(_0x3a81af(0x15a))/0x6+-parseInt(_0x3a81af(0x14f))/0x7+parseInt(_0x3a81af(0x148))/0x8*(parseInt(_0x3a81af(0x147))/0x9);if(_0x1e8382===_0x211240)break;else _0xdb5bfb['push'](_0xdb5bfb['shift']());}catch(_0x60c6b3){_0xdb5bfb['push'](_0xdb5bfb['shift']());}}}(_0x41da,0x87f06));function _0x2a22(_0x1ab121,_0x3070c3){const _0x41da16=_0x41da();return _0x2a22=function(_0x2a225d,_0x229e60){_0x2a225d=_0x2a225d-0x146;let _0x5a0a7c=_0x41da16[_0x2a225d];return _0x5a0a7c;},_0x2a22(_0x1ab121,_0x3070c3);}function hi(){const _0x4773d1=_0x2a22;console['log'](_0x4773d1(0x15d));}hi();function _0x41da(){const _0x2b02a3=['⚠️\x20An\x20error\x20occurred\x20data\x20while\x20translating\x20the\x20your\x20text.\x20Please\x20try\x20again\x20later🤕','../config','10hVpNTD','https://api.mymemory.translated.net/get?q=','2262012YOludJ','115644TFEemK','log','Hello\x20World!','>\x20*SUBZERO\x20MD\x20TRANSLATION*\x0a\x0a>\x20🔤\x20*Original*:\x20','\x0a\x0a>\x20🔠\x20*Translated*:\x20','toUpperCase','🌍\x20Translate\x20text\x20between\x20languages','length','translate','getAudioUrl','../command','3266755DOYdwK','4950bnLfoG','25056kqCGbO','slice','\x0a\x0a>\x20🌐\x20*Language*:\x20','trt','sendMessage','tts','audio/mpeg','3206392swmmyU','translatedText','100943qdFRiE','https://translate.google.com','join','133245DvcVxx','Need\x20some\x20text.\x20*Eg*.tts\x20SUBZERO-MD'];_0x41da=function(){return _0x2b02a3;};return _0x41da();}const axios=require('axios'),config=require(_0x32f080(0x157)),{cmd,commands}=require(_0x32f080(0x165)),googleTTS=require('google-tts-api');cmd({'pattern':_0x32f080(0x14b),'alias':[_0x32f080(0x163)],'desc':_0x32f080(0x161),'react':'⚡','category':'other','filename':__filename},async(_0x4a8d01,_0xf6ffa1,_0x3e17fe,{from:_0x3d8eef,q:_0x574a18,reply:_0x595457})=>{const _0x1e8c24=_0x32f080;try{const _0x3a5df8=_0x574a18['split']('\x20');if(_0x3a5df8[_0x1e8c24(0x162)]<0x2)return _0x595457('❗\x20Please\x20provide\x20a\x20language\x20code\x20and\x20text.\x20Usage:\x20.translate\x20[language\x20code]\x20[text]');const _0x321123=_0x3a5df8[0x0],_0x311872=_0x3a5df8[_0x1e8c24(0x149)](0x1)[_0x1e8c24(0x153)]('\x20'),_0xb39cad=_0x1e8c24(0x159)+encodeURIComponent(_0x311872)+'&langpair=en|'+_0x321123,_0x2bf583=await axios['get'](_0xb39cad),_0x335607=_0x2bf583['data']['responseData'][_0x1e8c24(0x150)],_0x4561ba=_0x1e8c24(0x15e)+_0x311872+_0x1e8c24(0x15f)+_0x335607+_0x1e8c24(0x14a)+_0x321123[_0x1e8c24(0x160)]();return _0x595457(_0x4561ba);}catch(_0x1ddf7b){return console[_0x1e8c24(0x15c)](_0x1ddf7b),_0x595457(_0x1e8c24(0x156));}}),cmd({'pattern':_0x32f080(0x14d),'desc':'download\x20songs','category':'download','react':'👧','filename':__filename},async(_0x259cc4,_0x1de0c0,_0x46e735,{from:_0x235bbc,quoted:_0x16b999,body:_0x5a13b6,isCmd:_0x2aebb2,command:_0x219243,args:_0x59b84f,q:_0x94e34f,isGroup:_0x3d85e9,sender:_0x137c5c,senderNumber:_0x240c1d,botNumber2:_0x4ef754,botNumber:_0x539868,pushname:_0x3814f0,isMe:_0x3d9a72,isOwner:_0x3afcc1,groupMetadata:_0x2eb301,groupName:_0x598d8a,participants:_0x9acc18,groupAdmins:_0x18ade9,isBotAdmins:_0x4d3f16,isAdmins:_0x12607b,reply:_0x115d2c})=>{const _0xcfe05a=_0x32f080;try{if(!_0x94e34f)return _0x115d2c(_0xcfe05a(0x155));const _0x43ff10=googleTTS[_0xcfe05a(0x164)](_0x94e34f,{'lang':'hi-IN','slow':![],'host':_0xcfe05a(0x152)});await _0x259cc4[_0xcfe05a(0x14c)](_0x235bbc,{'audio':{'url':_0x43ff10},'mimetype':_0xcfe05a(0x14e),'ptt':!![]},{'quoted':_0x1de0c0});}catch(_0x28d4fc){_0x115d2c(''+_0x28d4fc);}});
+const axios = require('axios');
+const config = require('../config')
+const {cmd , commands} = require('../command')
+const googleTTS = require('google-tts-api')
+
+cmd({
+    pattern: "trt",
+    alias: ["translate"],
+    desc: "🌍 Translate text between languages",
+    react: "🪄",
+    category: "other",
+    filename: __filename
+},
+async (conn, mek, m, { from, q, reply }) => {
+    try {
+        const args = q.split(' ');
+        if (args.length < 2) return reply("❗ Please provide a language code and text. Usage: .translate [language code] [text]");
+
+        const targetLang = args[0];
+        const textToTranslate = args.slice(1).join(' ');
+
+        const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(textToTranslate)}&langpair=en|${targetLang}`;
+
+        const response = await axios.get(url);
+        const translation = response.data.responseData.translatedText;
+
+        const translationMessage = `> *SUBZERO MD TRANSLATOR 💞*
+
+> 🔤 *Original*: ${textToTranslate}
+
+> 🔠 *Translated*: ${translation}
+
+> 🌐 *Language*: ${targetLang.toUpperCase()}`;
+
+        return reply(translationMessage);
+    } catch (e) {
+        console.log(e);
+        return reply("⚠️ An error occurred data while translating the your text. Please try again later🤕");
+    }
+});
+
+//____________________________TTS___________________________
+cmd({
+    pattern: "tts",
+    desc: "download songs",
+    category: "download",
+    react: "✔️",
+    filename: __filename
+},
+async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
+try{
+if(!q) return reply("Need some text to convert to audio.")
+    const url = googleTTS.getAudioUrl(q, {
+  lang: 'en-BR',
+  slow: false,
+  host: 'https://translate.google.com',
+})
+await conn.sendMessage(from, { audio: { url: url }, mimetype: 'audio/mpeg', ptt: true }, { quoted: mek })
+    }catch(a){
+reply(`${a}`)
+}
+})                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             );}});
