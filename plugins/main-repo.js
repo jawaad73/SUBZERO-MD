@@ -256,7 +256,8 @@ https://github.com/mrfrank-ofc/SUBZERO-MD
 
 
 
-
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
 
 const fetch = require('node-fetch');
 const config = require('../config');    
@@ -297,6 +298,7 @@ async (conn, mek, m, { from, reply }) => {
 
 https://github.com/mrfrank-ofc/SUBZERO-MD
 ──────────────────
+${readMore}
 \`BOT NAME:\`❄️
 > ${repoData.name}
 
@@ -310,9 +312,9 @@ https://github.com/mrfrank-ofc/SUBZERO-MD
 > ${repoData.forks_count}
 
 \`DESCRIPTION:\`📃
-> ${repoData.description || 'No description'}
+> ${repoData.description || 'No description'}\n
 ──────────────────
-\n\n> *© ροωєяє∂ ϐγ мя ƒяαиκ οƒϲ* 🎐`;
+\n> *© ροωєяє∂ ϐγ мя ƒяαиκ οƒϲ* 🎐`;
 
         // Send an image with the formatted info as a caption and context info
         await conn.sendMessage(from, {
